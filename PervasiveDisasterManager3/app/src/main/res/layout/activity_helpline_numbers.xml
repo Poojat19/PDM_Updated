@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".helpline_numbers">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/Add_card"
+        android:layout_width="67dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_emergency"
+            tools:ignore="VectorDrawableCompat" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Helpline Numbers"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/dark_blue"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Local Disaster Manager"
+        android:layout_marginLeft="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="140sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12345678"
+        android:layout_marginLeft="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="190sp"
+        android:textColor="@color/dark_pink"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="91011121"
+        android:layout_marginLeft="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="230sp"
+        android:textColor="@color/dark_pink"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <!--NGO-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NGO"
+        android:layout_marginLeft="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13141516"
+        android:layout_marginLeft="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="350sp"
+        android:textColor="@color/dark_pink"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="17181910"
+        android:layout_marginLeft="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="390sp"
+        android:textColor="@color/dark_pink"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <!--fire engine-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fire engine Services"
+        android:layout_marginLeft="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="470sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21222324"
+        android:layout_marginLeft="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="520sp"
+        android:textColor="@color/dark_pink"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25262728"
+        android:layout_marginLeft="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="560sp"
+        android:textColor="@color/dark_pink"
+        android:textStyle="bold"
+        android:textSize="17dp"/>
+
+</RelativeLayout>
+

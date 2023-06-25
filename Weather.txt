@@ -1,0 +1,56 @@
+import requests
+
+import pandas as pd
+
+from bs4 import BeautifulSoup
+
+# to get data from website
+file = requests.get("https://mausam.imd.gov.in/")
+
+# import Beautifulsoup for scraping the data
+
+soup = BeautifulSoup(file.content, "html.parser")
+
+# create empty list
+list =[]
+all = soup.find("div", {"class":"capitals clearfix"}).text
+
+# find all table with class-"twc-table"
+content = soup.find_all("div", {"class":"capitals clearfix"})
+
+for items in content:
+	for i in range(len(items.find_all("div"))-1):
+		# create empty dictionary
+		dict = {}
+		try:
+			# assign value to given key
+
+			dict["Capital"]= items.find_all("div", {"class":"capital"})[i].find("h3").text
+			dict["Temp"]= items.find_all("p", {"class":"now"})[i].find("span").text		
+			dict["Wind"]= items.find_all("p", {"class":"wind"})[i].text
+			'''dict["MinMax"]= items.find_all("p", {"class":"minmax"})[i].find_all("span", {"class":"max"}).find("i").text
+			dict["precip"]= items.find_all("td", {"class":"precip"})[i].text
+			dict["wind"]= items.find_all("td", {"class":"wind"})[i].text
+			dict["humidity"]= items.find_all("td", {"class":"humidity"})[i].text'''
+		except:
+			# assign None values if no items are there with specified class
+
+			dict["Capital"]="None"
+			dict["Temp"]="None"
+			dict["Wind"]="None"
+			'''dict["MinMax"]="None"
+			dict["precip"]="None"
+			dict["wind"]="None"
+			dict["humidity"]="None"'''
+
+		# append dictionary values to the list
+		list.append(dict)
+
+
+convert = pd.DataFrame(list)
+convert.to_csv("output.csv")
+
+# read csv file using pandas
+a = pd.read_csv("output.csv")
+print(a)
+
